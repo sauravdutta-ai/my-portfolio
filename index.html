@@ -691,24 +691,38 @@
 	(function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="BZkYWhBGaWcyXOsC_QyW4";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
   </script>
   <!-- Floating Chatbot Label -->
-  <div id="chatbot-label">Hi! I’m InsightMate</div>
+  <div id="chatbot-bubble">Hi! I’m InsightMate</div>
   <style>
-	  #chatbot-label {
+	  #chatbot-bubble {
 		  position: fixed;
 		  bottom: 90px; /* adjust distance above chatbot */
 		  right: 20px;  /* same side as chatbot */
-		  background-color: #ffc107; /* your primary color */
-		  color: white;
-		  padding: 8px 15px;
-		  border-radius: 25px;
-		  font-family: Arial, sans-serif;
+		  background-color: white; /* your primary color */
+		  color: black;
+		  padding: 12px 18px;
+		  border-radius: 20px;
+		  font-family: 'Comic Sans MS', cursive, sans-serif;
 		  font-size: 14px;
 		  font-weight: bold;
-		  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+		  box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
 		  z-index: 9999;
+		  position: fixed;
+	  }
+	  /* Create the little “pointer” for speech bubble */
+	  #chatbot-bubble::after {
+		  content: '';
+		  position: absolute;
+		  bottom: -10px; /* adjust below bubble */
+		  right: 15px;   /* align pointer with bubble */
+		  border-width: 10px 10px 0; /* triangle size */
+		  border-style: solid;
+		  border-color: #ffc107 transparent transparent transparent; /* match bubble color */
+		  display: block;
+		  width: 0;
 	  }
   </style>
   </body>
 
 </html>
+
 
