@@ -9703,3 +9703,18 @@ textarea.form-control {
   100% {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
+
+/* --- Custom Button Styles (Experience Section) --- */
+.btn-primary {
+  background-color: #6c63ff;
+  border: none;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #574bff;
+  transform: scale(1.05);
+}
+
+
